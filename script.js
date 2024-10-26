@@ -1,6 +1,6 @@
 let minutes = 0;
 let seconds = 0;
-let temperature = 29;
+let temperature = 18;
 let timerInterval;
 let isRunning = false;
 
@@ -10,12 +10,14 @@ const max_temp = document.querySelector('.max-temp');
 const toggle_button = document.querySelector('.heat-pump-button');
 
 function updateTimerDisplay() {
-  timer.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
-  
+  timer.textContent = `${String(minutes).padStart(2, '0')}:${String(
+    seconds
+  ).padStart(2, '0')}`;
+
   heat.textContent = `${String(temperature)}\u00B0C`;
 
   if (temperature === 30) {
-   max_temp.textContent = `Heat Pump reaches it's maximum temperature`;
+    max_temp.textContent = `Heat Pump reaches it's maximum temperature`;
   }
 }
 
@@ -34,9 +36,8 @@ function toggleTimer() {
 
       updateTimerDisplay();
     }, 1000);
-
   }
-  isRunning = !isRunning; 
+  isRunning = !isRunning;
 }
 
 toggle_button.addEventListener('click', toggleTimer);
