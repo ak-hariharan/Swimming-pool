@@ -1,0 +1,134 @@
+/* style.css
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+}
+
+.temperature-display {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.controls,
+.heatpump-status,
+.heat-pump-action {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    font-size: 1em;
+    margin-left: 10px;
+} */
+
+.container{
+    margin: 10px auto;
+    width: 50%;
+    height: 50vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+}
+.title{
+    text-align: center;
+    color: white;
+}
+.switch {
+    position: absolute;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    bottom: 10%;
+    left: 45%;
+    
+}
+.heat-pump-button{
+    opacity: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 20px;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    border-radius: 50%;
+    background-color: white;
+    transition: .4s;
+}
+.heat-pump-button:checked+.slider {
+    background-color: #21f34b;
+}
+.heat-pump-button:checked+.slider:before {
+    transform: translateX(26px);
+} 
+
+.readings {
+    width: 80%;
+    height: 25%;
+    color: black;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(236, 231, 231);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.max-temp{
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
